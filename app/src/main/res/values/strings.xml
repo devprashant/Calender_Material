@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Calender Material</string>
+    <string name="error_network_timeout">Network Timeout</string>
+</resources>
