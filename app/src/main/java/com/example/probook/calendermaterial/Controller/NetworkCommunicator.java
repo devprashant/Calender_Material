@@ -15,6 +15,7 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.probook.calendermaterial.Handler.DBHandler;
 import com.example.probook.calendermaterial.R;
 
 import org.json.JSONArray;
@@ -51,6 +52,7 @@ public class NetworkCommunicator {
                 if (response.length() > 0){
                     // Clear db and update data async
                     Log.d(TAG, "Received JSON Response " + response.toString());
+                    new DBHandler(context).createSchedule(response);
                 } else {
                     Log.d(TAG, "JSONArray received is empty");
                 }
